@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    copy_str = [x for x in my_string if x != 'c' or x != 'C']
-    return ("".join(copy_str))
+    """This method returns a 'new_string' through mapping of the old strings charcters"""
+    new_string = my_string.translate({ord(letter): None for letter in 'cC'})
+    return new_string
